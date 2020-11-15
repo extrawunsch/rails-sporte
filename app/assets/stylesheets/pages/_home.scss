@@ -6,16 +6,22 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-  height: 1800px;
+  height: 1400px;
 }
 
-header {
+.banner-landing {
   width: 100%;
   height: 80vh;
   background-image: url(https://images.unsplash.com/photo-1502904550040-7534597429ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1898&q=80);
   background-size: cover;
   background-position: center;
 }
+
+.banner-content {
+  width: 100%;
+  height: 80vh;
+}
+
 
 
 
