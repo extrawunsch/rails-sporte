@@ -1,10 +1,16 @@
+
+<div class="grid-system mt-5">
 <h1>All offers</h1>
-
+<div class="cards m-5">
 <% @offers.each do |offer| %>
-<div>
-  <td><%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %></td>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1552853662-8f707e1cb336?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= offer.title %></h5>
+    <p class="card-text"><%= offer.description %></p>
+    <h5><%= offer.price %></h5>
+  </div>
 </div>
-
 <% end %>
-
-
+</div>
+</div>
