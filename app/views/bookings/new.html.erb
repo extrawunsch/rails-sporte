@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="mx-5">Book your sports equipment</h1>
+  
+  <div class="card-trip m-5">
+    <img src="https://intersport-de.imgdn.net/fsi/server?type=image&source=marktplatz/produktiv/300/296095/296095_Inspire_T1000_1.jpg&effects=Pad(cc,ffffff),Matte(FFFFFF)&width=1100&height=1100" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @offer.title %></h2>
+        <h2><%= "#{@offer.price}€ / day" %></h2>
+      </div>
+    </div>
+  </div>
+  <div class="m-5">
+    <h3 class="mb-3">Choose your renting range</h3>
+    <%= simple_form_for [@offer, @booking] do |f| %>
+      <%= f.input :begin_on, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
+      <%= f.input :end_on, as: :date, start_year: Date.today.year, order: [:day, :month, :year] %>
+      <%= f.submit 'Reserve', class: 'btn btn-primary my-3' %>
+    <% end %>
+  </div>
+  
+</div>
+
+
+  
