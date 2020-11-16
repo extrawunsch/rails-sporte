@@ -70,8 +70,9 @@
           background: #505f79;
           color: #fff;
   
-          &.tag-news {
+          &.tag-price {
             background: #36b37e;
+            border-radius: 50%;
           }
         }
       }
@@ -122,7 +123,7 @@
   }
   
   // CARD IMAGES
-  .card {
+  .card-image {
     .card-img,
     .card-img-hovered {
       background-image: var(--card-img-hovered-overlay),
