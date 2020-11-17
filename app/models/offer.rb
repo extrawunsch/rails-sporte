@@ -3,5 +3,7 @@ class Offer < ApplicationRecord
   has_many :bookings
   has_many :users, through: :bookings
 
-  validates :tile, :description, :category, :price, :location, :pick_up_at, presence: true
+  validates :title, :description, :category, :price, :location, :pick_up_at, presence: true
 end
+
+
