@@ -16,6 +16,17 @@
   transition: 0.2s ease-out;
 }
 
+.links-home {
+  color: white;
+  font-size: 24px;
+  font-size: 700;
+}
+
+.links-home:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .links:hover {
   text-decoration: none;
   color: rgb(58, 76, 238);
@@ -37,15 +48,13 @@
   font-weight: bolder;
   display: flex;
   justify-content: center;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
   align-items: center;
 }
 
-.menu-icon h1 {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 24px;
-  padding: 0;
-  margin: 0;
+
+.menu-icon:hover {
+  color: #000;
 }
 
 nav {
@@ -56,6 +65,8 @@ nav {
   z-index: 5;
   transition: 0.5s ease-in;
   margin-bottom: 24px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  filter: blur(10);
 }
 
 nav ul {
