@@ -4,7 +4,12 @@
   <div class="banner-landing">
     <div class="banner-content">
         <div id="banner-title"><h1>No sport equipment ? No Problem ! </h1></div>
-        <div><%= link_to 'Show more', offers_path, class: 'btn btn-primary m-5'%></div>
+        <div class="button btn-advanced">
+            <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+            </svg>
+            <%= link_to 'Explore', offers_path, class: "button text"%>
+        </div>
     </div>
   </div>
 </div>

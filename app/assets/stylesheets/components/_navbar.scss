@@ -32,6 +32,7 @@
   color: rgb(58, 76, 238);
 }
 
+
 .menu { 
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,7 @@ nav {
   filter: blur(10);
 }
 
-nav ul {
+.menu-list ul {
   margin: 0;
   line-height: 60px; 
   list-style: none;
@@ -79,6 +80,11 @@ nav ul {
   display: flex;
   justify-content: space-around;
 }
+
+.menu-list li {
+  float: right;
+}
+
 
 .menu-list { 
   width: 80%;
