@@ -5,8 +5,13 @@
   <div class="cards m-5">
     <% @offers.each do |offer| %>
     <div class="card" style="width: 18rem;">
-      <%= link_to offer_path(offer) do %>
-      <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+     <%= link_to offer_path(offer) do %>
+        <% if offer.photo.attached? %>
+          <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+        <% else %>
+          <% placeholder_url = "https://lunawood.com/wp-content/uploads/2018/02/placeholder-image.png" %>
+          <%= image_tag placeholder_url, width: '400' %>
+        <% end %>
       <% end %>
         <div class="card-body">
           <h5 class="card-title"><%= offer.title %></h5>
