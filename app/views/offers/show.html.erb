@@ -1,4 +1,16 @@
 <div class="container">
-<h1>One Offer</h1>
-    <%= @offer.title %>
+  <div>
+    <h1><%= @offer.title %></h1>
+  </div>
+  <div>
+    <h3><%= @offer.category %></h3>
+    <p><%= @offer.description %></p>
+  </div>
+  <div>
+    <p><%= "Pick up at #{@offer.pick_up_at}" %></p>
+    <h3><%= "#{@offer.price} €/ day" %></h3>
+  </div>
+
+
+    <%#= link_to ,  %>
 </div>
