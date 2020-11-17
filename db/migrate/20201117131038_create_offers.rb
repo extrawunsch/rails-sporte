@@ -7,7 +7,8 @@ class CreateOffers < ActiveRecord::Migration[6.0]
       t.integer :price
       t.string :location
       t.date :pick_up_at
-      t.references :user, null: false, foreign_key: true
+      t.references :host, null: false, foreign_key: { to_table: :users }
+
 
       t.timestamps
     end
