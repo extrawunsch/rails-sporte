@@ -3,9 +3,13 @@ class OfferPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-
+  end
     def create?
-      return true
+      true
+    end
+
+    def new?
+      true
     end
 
     def update?
@@ -15,5 +19,4 @@ class OfferPolicy < ApplicationPolicy
     def destroy?
       record.user == user
     end
-  end
 end

@@ -1,0 +1,9 @@
+<%= simple_form_for(@offer) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :category, collection: ['ball sports', 'racket sports', 'gym equipment', 'water sports', 'winter sports', 'biking', 'fighting sports', 'yoga equipment', 'other'], prompt: "Choose a category"  %>
+  <%= f.input :price %>
+  <%= f.input :location %>
+  <%= f.input :pick_up_at %>
+  <%= f.submit %>
+<% end %>
