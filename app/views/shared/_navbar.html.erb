@@ -6,10 +6,9 @@
     </div>
     <div class="menu-list">
         <ul>
-            <li>About us</li>
             <li>How does it work</li>
             <li>Community</li>
-            <li>About us</li>
+            <%= link_to "About us", new_user_session_path, class: "links"%>
             <li>
                 <% if user_signed_in? %>
                 <%= link_to "Logout", destroy_user_session_path, method: :delete%>

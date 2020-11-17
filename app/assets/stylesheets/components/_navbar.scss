@@ -11,6 +11,16 @@
   width: 40px;
 }
 
+.links {
+  color: white;
+  transition: 0.2s ease-out;
+}
+
+.links:hover {
+  text-decoration: none;
+  color: #000;
+}
+
 .menu { 
   display: flex;
   justify-content: space-between;
