@@ -1,23 +1,24 @@
 <nav>
-    <div class="menu-icon">
-    <i class="fa fa-bars fa-2x"></i>
-    </div>
-    <div class="logo">
-        Sporte
-    </div>
     <div class="menu">
-    <ul>
-        <li>How does it work</li>
-        <li>Community</li>
-        <li>About us</li>
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary"  %>
-          <% else %>
-            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary"  %> |
-            <%= link_to "Login", new_user_session_path, class: "btn btn-primary"  %>
-          <% end %>
-        </li>
-    </ul>
+    <div class="menu-icon">
+        <i class="fas fa-spa"></i>
+        <h1>Sporte</h1>
+    </div>
+    <div class="menu-list">
+        <ul>
+            <li>About us</li>
+            <li>How does it work</li>
+            <li>Community</li>
+            <li>About us</li>
+            <li>
+                <% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete%>
+                <% else %>
+                <%= link_to "Sign up", new_user_registration_path %> |
+                <%= link_to "Login", new_user_session_path%>
+                <% end %>
+            </li>
+        </ul>
+    </div>
     </div>
 </nav>
