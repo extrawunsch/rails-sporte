@@ -1,7 +1,8 @@
 
 <%= render 'shared/navbar' %>
-<div class="grid-system mt-5">
-<h1>All offers</h1>
+<div class="grid-system">
+ <div class="title"><h1>All offers</h1></div>
+ <div><%= link_to 'Add an offer', new_offer_path, class: 'btn-filled m-5' %></div>
   <div class="cards m-5">
     <% @offers.each do |offer| %>
     <div class="card" style="width: 18rem;">
@@ -21,7 +22,7 @@
     </div>
     <% end %>
   </div>
-<%= link_to 'Add an offer', new_offer_path, class: 'btn btn-primary' %>
+
 </div>
 
 <%= render 'shared/footer' %>

@@ -16,12 +16,14 @@
     font-weight: lighter;
     background: rgba(0, 0, 0, 0);
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn-filled:hover {
     font-weight: 900;
-    background: #ffc403;
+    color: grey;
+    padding: 18px 36px;
+    text-decoration: none;
 }
 
 .button {
