@@ -2,7 +2,7 @@
 
 <% @offers.each do |offer| %>
 <div>
-  <%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %>
+  <%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %><%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
   <%= link_to 'Show more', offer_path(offer), class: 'btn btn-primary' %>
 </div>
 
