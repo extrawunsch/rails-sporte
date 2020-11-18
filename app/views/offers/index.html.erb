@@ -2,7 +2,10 @@
 
 <% @offers.each do |offer| %>
 <div>
-  <td><%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %></td>
+  <%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %>
+  <%= link_to 'Show more', offer_path(offer), class: 'btn btn-primary' %>
 </div>
 
 <% end %>
+
+

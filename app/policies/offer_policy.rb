@@ -4,6 +4,11 @@ class OfferPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+    def show?
+      return true
+    end
+
     def create?
       true
     end
