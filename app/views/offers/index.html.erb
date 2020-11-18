@@ -1,0 +1,8 @@
+<h1>All offers</h1>
+
+<% @offers.each do |offer| %>
+<div>
+  <td><%= offer.title %> <%= offer.description %> <%= offer.category %> <%= offer.price %> <%= offer.location %> <%= offer.pick_up_at %></td>
+</div>
+
+<% end %>
