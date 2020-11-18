@@ -10,7 +10,14 @@
         <li>How does it work</li>
         <li>Community</li>
         <li>About us</li>
-        <li class="btn btn-primary" href="#">Login</li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary"  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary"  %> |
+            <%= link_to "Login", new_user_session_path, class: "btn btn-primary"  %>
+          <% end %>
+        </li>
     </ul>
     </div>
 </nav>
