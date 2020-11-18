@@ -4,19 +4,24 @@ class OfferPolicy < ApplicationPolicy
       scope.all
     end
   end
-    def create?
-      true
-    end
 
-    def new?
-      true
-    end
+  def show?
+    return true
+  end
 
-    def update?
-      record.user == user
-    end
+  def create?
+    true
+  end
 
-    def destroy?
-      record.user == user
-    end
+  def new?
+    true
+  end
+
+  def update?
+    record.user == user
+  end
+
+  def destroy?
+    record.user == user
+  end
 end
