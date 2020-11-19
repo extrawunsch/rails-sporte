@@ -6,6 +6,15 @@
 
 .grid-system {
   text-align: center;
+  margin-top: 90px;
+  padding: 16px;
+}
+
+.card {
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s ease-out;
 }
 
 .card-img-top {
@@ -15,9 +24,28 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 0.3s ease-in;
+  transition: 0.2s ease-in;
+}
+
+
+.card-body {
+  height: 100%;
+  width: 100%;
+  transition: 0.4s ease-in;
+  color: black;
 }
 
 .card-img-top:hover {
-    opacity: 0.8;
+    opacity: 0.5;
   }
+
+.card-body:hover {
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 0px 0px black;
+}
+
+
