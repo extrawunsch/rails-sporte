@@ -9,9 +9,11 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [] do
-    member do
+  resources :bookings, only: [:index] do
+    member do # member when you want id in link
       get :success
     end
   end
 end
+
+# collection /bookings/success

@@ -12,4 +12,6 @@ class BookingPolicy < ApplicationPolicy
   def success?
     true
   end
+
+
 end
