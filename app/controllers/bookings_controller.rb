@@ -12,10 +12,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     authorize @booking
     if @booking.save
-      redirect_to offer_path(@offer)
+      redirect_to success_booking_path(@booking)
     else
       render :new
     end
+  end
+
+  def success
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   private
