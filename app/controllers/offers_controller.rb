@@ -8,7 +8,10 @@ class OffersController < ApplicationController
     @markers = @offers.geocoded.map do |offer|
       {
         lat: offer.latitude,
-        lng: offer.longitude
+        lng: offer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: 
+          { offer: offer }),
+        image_url: helpers.asset_url('marker.png')
       }
     end
   end
