@@ -6,7 +6,7 @@ class OfferPolicy < ApplicationPolicy
   end
 
   def show?
-    return true
+    true
   end
 
   def create?
@@ -23,5 +23,9 @@ class OfferPolicy < ApplicationPolicy
 
   def destroy?
     record.user == user
+  end
+
+  def success?
+    true
   end
 end
