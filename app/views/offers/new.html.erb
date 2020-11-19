@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container shadow-sm p-3 mb-5 bg-light rounded">
   <div class="mt-5 mb-5">
     <h1 class="d-flex justify-content-center">Share your sports equipment</h1>
     <h2 class="d-flex justify-content-center">We need some more details</h2>
   </div>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mb-5">
     <%= simple_form_for(@offer) do |f| %>
     <%= f.input :title, label: "Name your sports equipment?" %>
     <%= f.input :description, as: :text, label: 'Add some details: Is the item in good shape? Why do you want to rent it out? etc.' %>
