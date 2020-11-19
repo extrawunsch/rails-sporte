@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Congrats you created successfully your first sports equipment to rent out!</h1>
+  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+  <h2>And here it is:</h2>
+  <div>
+    <h1><%= @offer.title %></h1>
+  </div>
+  <div>
+    <h3><%= @offer.category %></h3>
+    <p><%= @offer.description %></p>
+  </div>
+  <div>
+    <p><%= "Pick up at #{@offer.pick_up_at}" %></p>
+    <h3><%= "#{@offer.price} €/ day" %></h3>
+  </div>
+
+
+<%= link_to 'Kick me back to all sports equipments', offers_path, class: 'btn btn-primary'%>
+</div>
