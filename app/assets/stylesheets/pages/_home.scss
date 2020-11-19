@@ -19,10 +19,14 @@ body {
 .banner-content {
   width: 100%;
   height: 100vh;
+  padding: 240px 100px 100px 100px;
+  text-align: center;
 }
 
-#banner-title {
+#banner-title h1 {
   color:white;
+  font-family: 'Montserrat', sans-serif !important;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 
