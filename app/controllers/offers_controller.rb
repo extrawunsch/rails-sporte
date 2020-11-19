@@ -31,10 +31,15 @@ class OffersController < ApplicationController
     @offer.host = current_user
     authorize @offer
       if @offer.save
-        redirect_to offers_path
+        redirect_to success_offer_path(@offer)
       else
         render :new
       end
+  end
+
+  def success
+    @offer = Offer.find(params[:id])
+    authorize @offer
   end
 
   private
