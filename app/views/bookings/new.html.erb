@@ -14,8 +14,7 @@
     <h3 class="mb-3">Choose your renting range</h3>
     <%= simple_form_for [@offer, @booking] do |f| %>
     <div class="d-flex justify-content-center">
-      <%= f.input :begin_on, as: :string, input_html: {class: "datepicker"} %>
-      <%= f.input :end_on, as: :string, input_html: {class: "datepicker"} %>
+      <%= f.input :begin_on, as: :string, input_html: {class: "datepicker"}, label: "Choose the dates" %>
     </div>
 
       <%= f.submit 'Reserve', class: 'btn btn-primary my-3' %>
