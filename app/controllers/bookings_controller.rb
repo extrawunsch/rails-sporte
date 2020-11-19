@@ -13,17 +13,10 @@ class BookingsController < ApplicationController
     @booking.offer = @offer
     @booking.user = current_user
     authorize @booking
-
     if @booking.save
       redirect_to offer_path(@offer)
     else
       render :new
     end
   end
-
-  private
-
-  # def booking_params
-  #   params.require(:booking).permit(:begin_on, :end_on)
-  # end
 end
