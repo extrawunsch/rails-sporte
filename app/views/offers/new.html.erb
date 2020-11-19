@@ -1,10 +1,21 @@
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :category, collection: ['ball sports', 'racket sports', 'gym equipment', 'water sports', 'winter sports', 'biking', 'fighting sports', 'yoga equipment', 'other'], prompt: "Choose a category"  %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :location %>
-  <%= f.input :pick_up_at %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="mt-5 mb-5">
+    <h1 class="d-flex justify-content-center">Share your sports equipment</h1>
+    <h2 class="d-flex justify-content-center">We need some more details</h2>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= simple_form_for(@offer) do |f| %>
+    <%= f.input :title, label: "Name your sports equipment?" %>
+    <%= f.input :description, as: :text, label: 'Add some details: Is the item in good shape? Why do you want to rent it out? etc.' %>
+    <%= f.input :price, label: "What's the price per day" %>
+    <%= f.input :category, as: :radio_buttons, collection: ['Gym equipment', 'Ball sports', 'Racket sports', 'Water sports', 'Winter sports', 'Fighting sports', 'Yoga equipment', 'Other'], label: 'Choose a category'  %>
+    <%= f.input :location, label: "Add address where item can be picked up?" %>
+    <%= f.input :pick_up_at, as: :date, start_year: Date.today.year, order: [:day, :month, :year], label: "Pick-up day?" %>
+    <%= f.input :pick_up_at, as: :time, label: "Pick-up time?" %>
+    <%= f.input :photo, as: :file, label: 'Add a picture to your item' %>
+    <%= f.submit 'Create Offer', class: 'btn btn-primary my-4'%>
+  <% end %>
+  </div>
+
+</div>
+
