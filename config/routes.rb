@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index] do
+  resources :bookings, only: [:index, as: :userdashboard] do
     member do # member when you want id in link
       get :success
     end
