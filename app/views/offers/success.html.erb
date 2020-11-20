@@ -1,19 +1,14 @@
-<div class="container">
-  <h1>Congrats you created successfully your first sports equipment to rent out!</h1>
-  <%= cl_image_tag @offer.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-  <h2>And here it is:</h2>
-  <div>
-    <h1><%= @offer.title %></h1>
+<%= render 'shared/navbar' %>
+<div class="container w-75 shadow-none p-3 my-5 rounded">
+  <div class="text-center m-5">
+    <h1>Congratulations!</h1>
+    <h4 class="mb-5">You successfully created your offer!</h4>
+    <iframe src="https://giphy.com/embed/Q9FGOQewX92eRRO9Qi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wwe-wrestling-raw-monday-night-Q9FGOQewX92eRRO9Qi"></a></p>
+    <div>
+      <%= link_to 'Go to your Dashboard', bookings_path, class: 'btn btn-ghost' %>
+    </div>
+    <div class="m-5">
+      <%= link_to 'Browse sports equipments', offers_path, class: 'btn btn-ghost'%>
+    </div>
   </div>
-  <div>
-    <h3><%= @offer.category %></h3>
-    <p><%= @offer.description %></p>
-  </div>
-  <div>
-    <p><%= "Pick up at #{@offer.pick_up_at}" %></p>
-    <h3><%= "#{@offer.price} €/ day" %></h3>
-  </div>
-
-
-<%= link_to 'Kick me back to all sports equipments', offers_path, class: 'btn btn-primary'%>
 </div>
