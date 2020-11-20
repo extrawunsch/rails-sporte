@@ -1,16 +1,17 @@
 <%= render 'shared/navbar' %>
 <div class="container w-75 p-5 bg-light rounded shadow-sm">
   <div class="m-5 px-3">
-    <h1 class="mt-3"><%= @offer.title %></h1>
+    <h1 class="mt-5"><%= @offer.title %></h1>
     <h3 class="p-2"><%= @offer.category %></h3>
   </div>
+  <hr>
   <div class="cards m-5">
     <div class="col-sm mr-5">
       <%= cl_image_tag @offer.photo.key, height: 250, crop: :fill, class: "item-image" %>
     </div>
 
     <div class="col-sm">
-      <div class="card-category">
+      <div class="card-category mb-2">
         <p>Pick-up time</p>
         <p><%= "#{@offer.pick_up_at.strftime("%d.%m.%Y - %H:%M")}" %></p>
         <h3><%= "#{@offer.price} €/ day" %></h3>
@@ -18,10 +19,11 @@
       </div>
     </div>
   </div>
+
   <div class="m-5 px-3">
     <p><%= @offer.description %></p>
   </div>
-  <div class="mx-5 my-3 px-3">
+  <div class="mx-5 mt-5 px-3">
     <%= link_to 'Back to all offers', offers_path, class: 'btn btn-ghost px-3'%>
   </div>
 </div>
