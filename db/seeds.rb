@@ -11,6 +11,10 @@
 
   require "open-uri"
 
+  Booking.destroy_all
+  Offer.destroy_all
+  User.destroy_all
+
   puts 'seed begins'
   niklas = User.create(email: 'niklas@gmail.com', password: '123456', name: 'Niklas')
   ramona = User.create(email: 'ramona@gmail.com', password: '123456', name: 'Ramona')
