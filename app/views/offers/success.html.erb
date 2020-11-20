@@ -1,18 +1,14 @@
 <%= render 'shared/navbar' %>
 <div class="container w-75 shadow-none p-3 my-5 rounded">
   <div class="text-center m-5">
-    <h1 class="mb-5">Congratulations!</h1>
-    <iframe src="https://giphy.com/embed/5orToQ5JFECis" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/coca-cola-goal-gol-yass-5orToQ5JFECis"></a></p>
-    <h4>You successfully created your offer!</h4>
-    <div class="m-5">
-      <h5><%= @offer.title %></h5>
-      <h5><%= @offer.category %></h5>
-      <h5><%= @offer.description %></h5>
-      <h5><%= "Pick it up at: #{@offer.pick_up_at.strftime("%-d.%-m.%y - %H:%M")}" %></h5>
-      <h5><%= "#{@offer.location}" %></h5>
+    <h1>Congratulations!</h1>
+    <h4 class="mb-5">You successfully created your offer!</h4>
+    <iframe src="https://giphy.com/embed/Q9FGOQewX92eRRO9Qi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/wwe-wrestling-raw-monday-night-Q9FGOQewX92eRRO9Qi"></a></p>
+    <div>
+      <%#= link_to 'Go to your Dashboard', ,class: 'btn btn-ghost' %>
     </div>
     <div class="m-5">
-      <%= link_to 'Back to all sports equipments', offers_path, class: 'btn btn-ghost'%>
+      <%= link_to 'Browse sports equipments', offers_path, class: 'btn btn-ghost'%>
     </div>
   </div>
 </div>
