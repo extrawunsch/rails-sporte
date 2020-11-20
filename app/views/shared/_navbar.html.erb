@@ -6,11 +6,22 @@
     </div>
     <div class="menu-list">
         <ul>
-            <li>Community</li>
-            <%= link_to "About us", new_user_session_path, class: "links"%>
+            <%= link_to "Create offer",  new_offer_path, class: "link-offer"%>
             <li>
                 <% if user_signed_in? %>
-                <%= link_to "Logout", destroy_user_session_path, class: "links", method: :delete%>
+                <div class="user d-flex justify-content-between items-align-center">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My account
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">My Dashboard</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <%= link_to "Logout", destroy_user_session_path, class: "dropdown-item links-dropdown", method: :delete%>
+                        </div>
+                    </div>
+                    <img class="avatar m-3" alt="avatar-bordered" src="https://kitt.lewagon.com/placeholder/users/sarahlafer" />
+                </div>
                 <% else %>
                 <%= link_to "Sign up", new_user_registration_path, class: "links" %> |
                 <%= link_to "Login", new_user_session_path, class: "links"%>
