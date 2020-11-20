@@ -4,11 +4,22 @@ class OffersController < ApplicationController
 
   def index
     @offers = policy_scope(Offer)
+
     sql_query = "category ILIKE :query OR title ILIKE :query OR description ILIKE :query"
     if params[:query].present?
       @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
     else
       @offers = Offer.all
+    end
+
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: 
+          { offer: offer }),
+        image_url: helpers.asset_url('marker.png')
+      }
     end
   end
 

@@ -16,6 +16,17 @@
   transition: 0.2s ease-out;
 }
 
+.link-offer {
+  font-weight: 400;
+  color: black;
+  transition: 0.2s ease-out;
+}
+
+.link-offer:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .links-home {
   color: white;
   font-size: 24px;
@@ -29,7 +40,7 @@
 
 .links:hover {
   text-decoration: none;
-  color: rgb(58, 76, 238);
+  color: grey;
 }
 
 
@@ -75,14 +86,14 @@ nav {
   line-height: 60px; 
   list-style: none;
   color: white;
-  overflow: hidden;
-  padding: 0;
   display: flex;
+  float: right;
   justify-content: space-around;
+  align-items: center;
 }
 
 .menu-list li {
-  float: right;
+  padding: 0 48px;
 }
 
 
@@ -94,6 +105,28 @@ nav {
 nav.black {
   background: #000;
 }
+
+#dropdownMenuButton{
+  color:white;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: lighter;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.links-dropdown {
+  color: black;
+  transition: 0.2s ease-out;
+}
+
+.links:hover {
+  text-decoration: none;
+  color: grey;
+}
+
 
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
