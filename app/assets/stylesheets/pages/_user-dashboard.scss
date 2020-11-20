@@ -2,11 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  filter: blur(100);
-  color: white;
-  text-shadow: 2px 2px black;
-  z-index: 2;
 }
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

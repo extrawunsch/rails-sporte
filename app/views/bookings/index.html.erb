@@ -1,34 +1,51 @@
 
 <%= render 'shared/navbar' %>
-<div class="wrapper">
-  <header>
-  <div class="banner-landing" style = "background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80');">
-    <div class="banner-content">
-        <div class= "cards-dashboard">
-          <div>
-          <h1>All my Bookings</h1>
-            <ul>
-              <% @bookings.each do |booking| %>
-                <div><strong><%= "#{booking.offer.title}" %></strong>
-                  <br><%= "#{booking.offer.location}" %>
-                  <br><%= "#{booking.offer.pick_up_at}" %>
-                </div>
-              <% end %>
-            </ul>
-          </div>
-          <div>
-          <h1>All my Offers</h1>
-            <ul>
-              <% @offers.each do |offer| %>
-                <div><strong><%= "#{offer.title}" %></strong>
-                  <br><%= "#{offer.location}" %>
-                  <br><%= "#{offer.pick_up_at}" %>
-                </div>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
 
+  <div class="main-container">
+    <div class="cards-map">
+      <div class="grid-system w-100">
+        <div class="title"><h1>My offers</h1></div>
+            <div class="cards m-5 w-100">
+            <% @offers.each do |offer| %>
+              <div class="card" style="width: 18rem;">
+              <%= link_to offer_path(offer) do %>
+              <% if offer.photo.attached? %>
+              <%= cl_image_tag offer.photo.key,class: "card-img-top" %>
+              <% else %>
+              <% placeholder_url = "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" %>
+              <%= image_tag placeholder_url, class: "card-img-top" %>
+              <% end %>
+              <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= offer.title %></h5>
+                  <hr>
+                  <h5 class="price"><%= offer.price %></h5>
+                </div>
+              </div>
+            <% end %>
+        </div>
+            <div class="title"><h1>My bookings</h1></div>
+            <div class="cards m-5">
+            <% @bookings.each do |booking| %>
+              <div class="card" style="width: 18rem;">
+              <%= link_to offer_path(booking.offer) do %>
+              <% if booking.offer.photo.attached? %>
+              <%= cl_image_tag booking.offer.photo.key,class: "card-img-top" %>
+              <% else %>
+              <% placeholder_url = "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" %>
+              <%= image_tag placeholder_url, class: "card-img-top" %>
+              <% end %>
+              <% end %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= booking.offer.title %></h5>
+                  <hr>
+                  <h5 class="price"><%= booking.offer.price %></h5>
+                </div>
+              </div>
+            <% end %>
+            </div>
+        </div>
+      </div>
+  </div>
+
+<%= render 'shared/footer' %>
