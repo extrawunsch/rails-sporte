@@ -8,5 +8,5 @@ class Offer < ApplicationRecord
   validates :category, inclusion: { in: ['ball sports', 'racket sports', 'gym equipment', 'water sports', 'winter sports', 'biking', 'fighting sports', 'yoga equipment', 'other'] }
 
   geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_?
+  after_validation :geocode, if: :will_save_change_to_location?
 end
