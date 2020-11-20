@@ -1,42 +1,19 @@
 .cards-dashboard {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
+  display: flex;
+  margin: 0 auto;
 }
 
-
-
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+.cards-map-dashboard {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
+.content {
+  margin-top: 96px;
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.bookings {
+  margin-top: 48px;
+  margin-bottom: 12px;
 }
