@@ -5,7 +5,7 @@ class Offer < ApplicationRecord
   has_one_attached :photo
 
   validates :title, :description, :category, :price, :location, :pick_up_at, presence: true
-  validates :category, inclusion: { in: ['ball sports', 'racket sports', 'gym equipment', 'water sports', 'winter sports', 'biking', 'fighting sports', 'yoga equipment', 'other'] }
+  validates :category, inclusion: { in: ['Gym equipment', 'Ball sports', 'Racket sports', 'Water sports', 'Winter sports', 'Fighting sports', 'Yoga equipment', 'Other'] }
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?

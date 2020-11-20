@@ -1,3 +1,31 @@
 h1 h2 {
   font-family: 'Montserrat', sans-serif !important;
 }
+
+.text {
+  font-weight: 300;
+  color: black;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.text:hover {
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.btn-filled-new {
+  color: black;
+  border: 2px solid black;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+.btn-filled-new:hover {
+  border: 2px solid $green;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+}
