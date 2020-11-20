@@ -6,7 +6,7 @@
         <div class="title"><h1>All offers</h1></div>
         <div><%= link_to 'Add an offer', new_offer_path, class: 'btn-filled m-5' %></div>
         
-          <div class="row mt-5">
+          <div class="row mx-5 mt-5">
             <div class="col w-25">
               <%= form_tag offers_path, method: :get do %>
                 <%= text_field_tag :query,
