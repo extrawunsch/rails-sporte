@@ -4,10 +4,30 @@
     padding: 8px 24px;
     border-radius: 50px;
     font-weight: lighter;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
+.btn-ghost:hover {
+  color: black;
+  border: 1px solid black;
+  font-weight: normal;
+}
+
+.btn-black {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: lighter;
+}
+
+.btn-black:hover {
+  color: white;
+  background-color: rgb(40, 40, 40);
+  font-weight: normal;
+}
 
 .btn-filled {
     color: black;
@@ -26,6 +46,8 @@
     padding: 18px 36px;
     text-decoration: none;
 }
+
+
 
 .button {
     color: #fff;
