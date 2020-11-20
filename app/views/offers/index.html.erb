@@ -1,10 +1,25 @@
-
 <%= render 'shared/navbar' %>
+ 
   <div class="main-container">
     <div class="cards-map">
       <div class="grid-system">
         <div class="title"><h1>All offers</h1></div>
-          <div><%= link_to 'Add an offer', new_offer_path, class: 'btn-filled m-5' %></div>
+        <div><%= link_to 'Add an offer', new_offer_path, class: 'btn-filled m-5' %></div>
+        
+          <div class="row mt-5">
+            <div class="col w-25">
+              <%= form_tag offers_path, method: :get do %>
+                <%= text_field_tag :query,
+                params[:query],
+                class: "form-control lg",
+                placeholder: "Search for equipment"
+              %>
+            </div>
+            <%= submit_tag "Search", class: "btn btn-ghost mr-3" %>
+            <% end %>
+          </div>
+        
+          
             <div class="cards m-5">
             <% @offers.each do |offer| %>
               <div class="card" style="width: 18rem;">
