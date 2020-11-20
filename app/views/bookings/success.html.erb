@@ -8,7 +8,10 @@
       <h5><%= "Pick it up at: #{@booking.offer.pick_up_at.strftime("%-d.%-m.%y - %H:%M")}" %></h5>
       <h5><%= "#{@booking.offer.location}" %></h5>
     </div>
-    <div class="m-5">
+     <div>
+      <%= link_to 'Go to your Dashboard', bookings_path, class: 'btn btn-ghost' %>
+    </div>
+    <div class="m-2">
       <%= link_to 'Back to all sports equipments', offers_path, class: 'btn btn-ghost'%>
     </div>
   </div>
