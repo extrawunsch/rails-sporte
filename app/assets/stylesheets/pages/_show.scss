@@ -18,12 +18,10 @@
   background-repeat: no-repeat;
 }
 
-.pick-up {
-  color: white;
-  background-color: rgb(104, 70, 255);
-  border-radius: 8px;
-  width: 45%;
+.carousel-inner {
+  margin-bottom: 1.5rem;
 }
+
 
 .offer-title {
   margin-top: 8rem;
@@ -34,10 +32,13 @@
   overflow: hidden;
 }
 
+#carouselExampleControls {
+  width: 50%;
+}
 .carousel-item {
   width: 100%;
 }
 
 .overview {
-  width: 40vw;
+  width: 100%;
 }
