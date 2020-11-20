@@ -4,25 +4,29 @@
   <header>
   <div class="banner-landing" style = "background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80');">
     <div class="banner-content">
-        <div id="banner-title" style = "color: white" style = "text-shadow: 2px 2px #black">
-          <h2>All my Bookings</h2>
+        <div class= "cards-dashboard">
+          <div>
+          <h1>All my Bookings</h1>
             <ul>
               <% @bookings.each do |booking| %>
-                <li><strong><%= "#{booking.offer.title}" %></strong>
+                <div><strong><%= "#{booking.offer.title}" %></strong>
                   <br><%= "#{booking.offer.location}" %>
                   <br><%= "#{booking.offer.pick_up_at}" %>
-                </li>
+                </div>
               <% end %>
             </ul>
-          <h2>All my Offers</h2>
+          </div>
+          <div>
+          <h1>All my Offers</h1>
             <ul>
               <% @offers.each do |offer| %>
-                <li><strong><%= "#{offer.title}" %></strong>
+                <div><strong><%= "#{offer.title}" %></strong>
                   <br><%= "#{offer.location}" %>
                   <br><%= "#{offer.pick_up_at}" %>
-                </li>
+                </div>
               <% end %>
             </ul>
+          </div>
         </div>
     </div>
   </div>
