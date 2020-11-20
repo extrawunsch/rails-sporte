@@ -1,9 +1,24 @@
-<div class="container">
-  <h1>Congrats your booking has successfully been created!</h1>
-  <%= cl_image_tag @booking.offer.photo.key, height: 300, width: 350, crop: :fill, class: "card-img-top" %>
-  <h2>Don't forget to pick it up at <%= "#{@booking.offer.location}" %></h2>
-    <h3><%= "#{@booking.offer.price} €/ day" %></h3>
-    <%= link_to 'Kick me back to all sports equipments', offers_path, class: 'btn btn-primary'%>
+<div class="container w-75 shadow-none p-3 my-5 rounded">
+  <div class="text-center">
+    <h1>Congratulations!</h1>
+    <h3>Your booking has successfully been created!</h3>
+  </div>
+
+  <div class="cards m-5">
+    <div class="card-category">
+      <h1>wohoooo <i class="fas fa-volleyball-ball"></i></h1>
+    </div>
+    <div class="card-category">
+      <h3>Pick it up at</h3>
+      <p><%= "#{@booking.offer.location}" %></p>
+    </div>
+    <div class="card-category">
+      <%= cl_image_tag @booking.offer.photo.key, height: 300, width: 300, crop: :fill, class: "card-img-top" %>
+    </div>
+  </div>
+  <div class="m-5">
+    <%= link_to 'Back to all sports equipments', offers_path, class: 'btn btn-filled'%>
+  </div>
 </div>
 
 
